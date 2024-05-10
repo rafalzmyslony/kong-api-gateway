@@ -11,6 +11,7 @@ https://github.com/Kong/kong/issues/4181
 ## Upstream
 You can manually add upstream to todo-app.
 Check IP address of todo app, for upstream service configuration.
+For following configuration, I used only one route - `/`. 
 ```
 docker inspect compose_todo-app_1
 ```
@@ -90,6 +91,18 @@ curl --request POST -k \
  --data "client_secret=12345" \
  --data "grant_type=client_credentials"
 ```
+
+#### Access api gateway using Baerer token returned from Oauth 2.0 plugin:
+```
+curl http://localhost:8000 \
+  --header "authorization: bearer kY4wxZLMx4EkzmyMpYBilyr0TkANotJe"
+```
+OR by HTTPS
+```
+curl -k https://localhost:8443 \
+  --header "authorization: bearer kY4wxZLMx4EkzmyMpYBilyr0TkANotJe"
+```
+
 
 ### Troubleshooting:
 ```
