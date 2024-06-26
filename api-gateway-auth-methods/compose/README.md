@@ -1,3 +1,6 @@
+## About:  
+In this project I've tried numerous ways to provide authentication and authorization for Kong Api Gateway. I've been using JWT, Oauth2.0, Basic auth plugins. I wanted to compare it with aws api gateway service, because I've been wondering, how aws api gateway can use Cognito to provide authZ for clients and what kind of authorization methods it can provide. That also led me to Ory/Hydra projects, which I didn't published yet, although it allowed me to gain knowledge how actually Oauth 2.0 standard should be deployed.    
+
 ## Getting started
 This if from this repo: 
 https://github.com/Kong/docker-kong/tree/master/compose
